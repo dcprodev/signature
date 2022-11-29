@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC"-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Email Signature</title>
+<meta content="text/html; charset=utf-8"http-equiv="Content-Type">
+<script>
+  function FillData(form) {
+    // alert(form.DisplayName.value);
+    document.getElementById("displayname").innerHTML = form.DisplayName?.value;
+    document.getElementById("position").innerHTML = form.Position?.value;
+    document.getElementById("mobilephone").innerHTML = form.MobilePhone?.value;
+    document.getElementById("email").innerHTML = form.Email?.value;
+    document.getElementById("website").href = "https://"+form.Website?.value;
+    document.getElementById("website").innerHTML = form.Website?.value;
+    document.getElementById("address").innerHTML = form.Address?.value;
+    document.getElementById("facebook").href = form.Facebook?.value;
+    // document.getElementById("linkedin").href = form.Linkedin?.value;
+    document.getElementById("twitter").href = form.Twitter?.value;
+    return false;
+  }
+
+  function updateFill(val) {
+    document.getElementById(val.id.toLowerCase()).innerHTML = val.value;
+  }
+
+  function updateUrl(val) {
+    document.getElementById(val.id.toLowerCase()).href = "https://"+val.value;
+  }
+
+  function updatePhone(val) {
+    document.getElementById(val.id.toLowerCase()).href = "tel:"+val.value;
+  }
+</script>
+</head>
+<body>
+    <div>
+      <span>Display Name:</span>
+      <input id="DisplayName" onchange="updateFill(this)" />
+    </div>
+    <div>
+      <span>Position:</span>
+      <input id="Position" onchange="updateFill(this)"  />
+    </div>
+    <div>
+      <span>Mobile Phone:</span>
+      <input id="MobilePhone" onchange="updateFill(this); updatePhone(this)"  />
+    </div>
+    <div>
+      <span>Email:</span>
+      <input id="Email" onchange="updateFill(this)"  />
+    </div>
+    <div>
+      <span>Website:</span>
+      <input id="Website" onchange="updateFill(this); updateUrl(this)"  />
+    </div>
+    <div>
+      <span>Address:</span>
+      <input id="Address" onchange="updateFill(this)"  />
+    </div>
+    <div>
+      <span>Facebook:</span>
+      <input id="Facebook" onchange="updateUrl(this)"  />
+    </div>
+    <div>
+      <span>LinkedIn:</span>
+      <input id="Linkedin" onchange="updateUrl(this)"  />
+    </div>
+    <div>
+      <span>Twitter:</span>
+      <input id="Twitter" onchange="updateUrl(this)"  />
+    </div>
+  
+<table style="width: 500px; font-size:9pt; font-family: Arial,sans-serif;" cellpadding="0" cellspacing="0">
+<tbody>
+ <tr>	
+  <td  style="width:86px; vertical-align:top;" valign="top">
+   <a  href="https://zen-me.io/" target="_blank"><img border="0" alt="Logo"height="86"width="86"style="width:86px; height:86px; border:0;"src="https://drive.google.com/uc?export=view&id=1EF66NjC2Xw1bUvsJyomZXl_uarpuUuu5"></a>   
+  </td>
+  
+  <td style="width:300px; vertical-align:top;" valign="top">
+   <table style="border-collapse: collapse;" cellpadding="0" cellspacing="0">
+   <tbody>
+    <tr>
+     <td id="displayname" style="font-size:10pt; font-family:Arial,sans-serif; font-weight: bold; color:#3c3c3b; padding-bottom:5px; line-height:16px;">{display name}</td>
+    </tr>
+    <tr>
+     <td id="position" style="font-size:10pt; font-family: Arial,sans-serif; font-weight: bold; color:#3c3c3b; padding-bottom:5px; line-height:16px;">{position}</td>
+    </tr>
+    <tr>
+     <td style="font-size:9pt; font-family:Arial,sans-serif; color:#3c3c3b; padding-bottom:1px; line-height:14px;">
+      <span style="font-weight:bold;">M: </span><a id="mobilephone" style="text-decoration: none !important">{mobile}</a>
+     </td>
+    </tr>				
+    <tr>
+     <td style="font-size:9pt; font-family:Arial,sans-serif; color:#3c3c3b; padding-bottom:1px; line-height:14px;"><span style="font-weight:bold;">E: </span><span id="email" >{email}</span> | <a id="website"  href="http://{website}"target="_blank"style="color:#1793d2">{website}</a>
+     </td>
+    </tr>				
+    <tr>
+     <td id="address" style="font-size:9pt; font-family:Arial,sans-serif; color:#3c3c3b; padding-bottom:1px; line-height:14px;">{address}</td>
+    </tr>				
+    <tr>
+     <td style="padding-top:10px; vertical-align: bottom;">
+      <span style="display:inline-block; height:22px;">
+        <span>
+          <a id="facebook" style="text-decoration: none !important">
+            <img alt="Facebook icon"border="0"width="20"height="20"style="border:0; height:20px; width:20px"src="https://drive.google.com/uc?export=view&id=1gGt0lwjcrQrE_Jz7yeMg0-N67VzKYCU_">
+          </a>&nbsp;
+        </span>
+        <span>
+          <a id="linkedin" style="text-decoration: none !important">
+            <img alt="LinkedIn icon"border="0"width="20"height="20"style="border:0; height:20px; width:20px"src="https://drive.google.com/uc?export=view&id=1ESbASvidjI_thtE1uKUg8cbEf3OQmVWF">
+          </a>&nbsp;
+        </span>
+        <span>
+          <a id="twitter" style="text-decoration: none !important">
+            <img alt="Twitter icon"border="0"width="20"height="20"style="border:0; height:20px; width:20px"src="https://drive.google.com/uc?export=view&id=1YH0-RmtzCBeFE7yFeUCXu1J5Nmjn8VCB">
+          </a>&nbsp;
+        </span>
+      </span>
+     </td>
+    </tr>
+   </tbody>
+   </table>
+  </td>
+ </tr>
+	
+</tbody>
+</table>
+</body>
+</html>
